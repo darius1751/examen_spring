@@ -1,6 +1,6 @@
 package com.examen.relations.services;
 
-import com.examen.relations.Dao.PersonDao;
+import com.examen.relations.dao.PersonDao;
 import com.examen.relations.dto.person.*;
 import com.examen.relations.exceptions.BadRequestException;
 import com.examen.relations.models.*;
@@ -8,6 +8,7 @@ import com.examen.relations.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

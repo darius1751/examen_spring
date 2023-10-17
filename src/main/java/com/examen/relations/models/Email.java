@@ -22,6 +22,7 @@ public class Email {
     @JoinColumn(name = "type")
     private EmailType emailType;
 
+
     @Column(unique = true, nullable = false)
     private String email;
 

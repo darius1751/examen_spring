@@ -15,7 +15,7 @@ public class Person {
     @Column
     private String name;
 
-    public static Person createPerson(CreatePersonDto createPersonDto){
+    public static Person createPerson(CreatePersonDto createPersonDto){ // FactoryConstructor
         final Person person = new Person();
         person.setName(createPersonDto.getName());
         return person;

@@ -1,4 +1,4 @@
-package com.examen.relations.Dao;
+package com.examen.relations.dao;
 
 import com.examen.relations.models.*;
 

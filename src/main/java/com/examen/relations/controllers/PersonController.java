@@ -1,6 +1,6 @@
 package com.examen.relations.controllers;
 
-import com.examen.relations.Dao.PersonDao;
+import com.examen.relations.dao.PersonDao;
 import com.examen.relations.dto.person.CreatePersonDto;
 import com.examen.relations.models.Person;
 import com.examen.relations.services.*;

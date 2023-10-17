@@ -9,6 +9,6 @@ public class BondType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column()
+    @Column(name = "type")
     private String bond;
 }

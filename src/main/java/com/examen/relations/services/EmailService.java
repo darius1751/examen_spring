@@ -13,11 +13,16 @@ public class EmailService {
     @Autowired
     private EmailRepository emailRepository;
 
+    @Autowired
+    private EmailTypeService emailTypeService;
+
     public Email create(Email email){
         return this.emailRepository.save(email);
     }
 
     public List<Email> createMany(List<Email> emails){
+        emails = emails.stream().peek(email -> email.setEmailType(emailTypeService.getReference(email.getEmailType().getId()))).toList();
         return this.emailRepository.saveAll(emails);
+
     }
 }
