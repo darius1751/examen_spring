@@ -2,6 +2,7 @@ package com.examen.relations.controllers;
 
 import com.examen.relations.dao.PersonDao;
 import com.examen.relations.dto.person.CreatePersonDto;
+import com.examen.relations.dto.person.UpdatePersonDto;
 import com.examen.relations.models.Person;
 import com.examen.relations.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,17 @@ public class PersonController {
     }
 
     @GetMapping("{id}")
-    private @ResponseBody Person findOneById(
+    private @ResponseBody PersonDao findOneById(
             @PathVariable("id") Integer id
     ){
         return this.personService.findOneById(id);
+    }
+
+    @PutMapping("{id}")
+    private @ResponseBody PersonDao updateOneById(
+            @PathVariable("id") Integer id,
+            @RequestBody UpdatePersonDto updatePersonDto
+    ){
+        return this.personService.updateOneById(id, updatePersonDto);
     }
 }

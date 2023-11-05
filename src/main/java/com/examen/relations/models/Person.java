@@ -21,6 +21,12 @@ public class Person {
         return person;
     }
 
+    public static Person createBond(Integer id){
+        Person person = new Person();
+        person.setId(id);
+        return person;
+    }
+
     public Integer getId() {
         return id;
     }

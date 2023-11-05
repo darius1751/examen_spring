@@ -14,6 +14,7 @@ public class PersonDao {
     private List<Email> emails;
     private List<Phone> phones;
     private List<Address> addresses;
+    private List<Bonding> bondings;
 
     public static PersonDao createPersonDao(
         Integer id,
@@ -21,7 +22,8 @@ public class PersonDao {
         List<Document> documents,
         List<Email> emails,
         List<Phone> phones,
-        List<Address> addresses
+        List<Address> addresses,
+        List<Bonding> bondings
     ){
         final PersonDao personDao = new PersonDao();
         personDao.setId(id);
@@ -30,6 +32,7 @@ public class PersonDao {
         personDao.setEmails(emails);
         personDao.setPhones(phones);
         personDao.setAddresses(addresses);
+        personDao.setBondings(bondings);
         return personDao;
 
     }
@@ -80,5 +83,13 @@ public class PersonDao {
 
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    public List<Bonding> getBondings() {
+        return bondings;
+    }
+
+    public void setBondings(List<Bonding> bondings) {
+        this.bondings = bondings;
     }
 }

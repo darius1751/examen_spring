@@ -41,6 +41,12 @@ public class Address {
         return address;
     }
 
+    public static Address probeAddress(Person person){
+        final Address address = new Address();
+        address.setPerson(person);
+        return address;
+    }
+
     public Integer getId() {
         return id;
     }

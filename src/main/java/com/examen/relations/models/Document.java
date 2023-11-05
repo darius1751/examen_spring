@@ -35,6 +35,21 @@ public class Document {
         document.setDocument(identification);
         return document;
     }
+    public static Document updateDocument(Person person, CreateDocumentDto createDocumentDto){
+        final Document document = new Document();
+        final Integer type = createDocumentDto.getType();
+        final String identification = createDocumentDto.getDocument();
+        document.setPerson(person);
+        document.setDocumentType(DocumentType.createDocumentType(type));
+        document.setDocument(identification);
+        return document;
+    }
+
+    public static Document probeDocument(Person person){
+        Document document = new Document();
+        document.setPerson(person);
+        return document;
+    }
 
     public Integer getId() {
         return id;

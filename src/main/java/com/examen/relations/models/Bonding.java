@@ -38,6 +38,12 @@ public class Bonding {
         return bonding;
     }
 
+    public static Bonding probeBonding(Person binding){
+        final Bonding bonding = new Bonding();
+        bonding.setBinding(binding);
+        return bonding;
+    }
+
 
     public Integer getId() {
         return id;

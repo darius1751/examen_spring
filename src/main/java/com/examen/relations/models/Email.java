@@ -42,6 +42,12 @@ public class Email {
         return email;
     }
 
+    public static Email probeEmail(Person person){
+        final Email email = new Email();
+        email.setPerson(person);
+        return email;
+    }
+
     public Integer getId() {
         return id;
     }

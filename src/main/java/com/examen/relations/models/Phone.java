@@ -34,11 +34,17 @@ public class Phone {
     private Person person;
 
     public static Phone createPhone(Person person, CreatePhoneDto createPhoneDto){
-        Phone phone = new Phone();
+        final Phone phone = new Phone();
         phone.setPhone(createPhoneDto.getPhone());
         phone.setType(PhoneType.createPhoneType(createPhoneDto.getType()));
         phone.setPerson(person);
         phone.setState(true);
+        return phone;
+    }
+
+    public static Phone probePhone(Person person){
+        final Phone phone = new Phone();
+        phone.setPerson(person);
         return phone;
     }
 
